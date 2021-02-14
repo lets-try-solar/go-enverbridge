@@ -21,6 +21,10 @@ This will be the new version of my get_solar.pl script now fully written in GOLA
 
 get_solar is a script to collect stats from the Envertec portal and will push these metrics into a InfluxDB. Additionally the script can send the data to a MQTT broker and to a CCU2.
 
+## Download
+
+You can download the pre-build binaries for MacOS or Linux from the release page.
+
 #### Create a configuration file
 
   - id: keep it empty (the script will collect the stationID from the envertec portal automatically)
@@ -59,9 +63,13 @@ vi envertech_config.json
     "password" : "PASSWORD"
 }
 ```
-
+## MacOS execution
 ```
-go run get_solar.go -config /opt/go-enverbrige/envertech_config.json
+./enverbridge-amd64-darwin -config /opt/go-enverbrige/envertech_config.json
+```
+## Linux execution
+```
+./enverbridge-amd64-linux -config /opt/go-enverbrige/envertech_config.json
 ```
 
 License
